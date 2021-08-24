@@ -12,4 +12,4 @@ users_list = [
 ]
 
 user_fixture = {"user_id": 1, "features_allowed": [1, 2, 5]}
-
+features_available_fixture = [1, 2, 3]
