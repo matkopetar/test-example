@@ -1,0 +1,20 @@
+{
+  "name": "playback_actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "playback_actions.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "mocha": "^9.1.0"
+  },
+  "scripts": {
+    "test": "mocha tests/test_actions.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
