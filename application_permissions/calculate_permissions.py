@@ -1,18 +1,13 @@
-user_applications_list = [{"app_id": 1}, {"app_id": 2}, {"app_id": 3}, {"app_id": 126}, ]
-applications_with_features_list = [
-    {"app_id": 1, "features_available": [1, 2, 3]},
-    {"app_id": 2, "features_available": [3, 4, 5, 7]},
-    {"app_id": 3, "features_available": [3, 12]},
-]
-users_list = [
-    {"user_id": 1, "features_allowed": [1, 2, 5]},
-    {"user_id": 2, "features_allowed": [1, 2, 3, 4]},
-    {"user_id": 3, "features_allowed": []},
-]
+"""
+Shortcoming of these functions are that they doesn't validate if the format of (passed) data is correct.
+It doesn't inform you what should like the format be if it isn't correct.
+"""
+
+from .fixtures import user_applications_list, applications_with_features_list, users_list
 
 
 def extract_user(user_id, users):
-    user_dict = None
+    user_dict = {}
     for user in users:
         if user.get('user_id') == user_id:
             user_dict = user
@@ -48,3 +43,6 @@ def calculate_permissions_for_user(user_id, user_applications, applications_with
         })
 
     return result
+
+
+print(calculate_permissions_for_user(1, user_applications_list, applications_with_features_list, users_list))
